@@ -1,100 +1,90 @@
-Crime Data Classification Using Logistic Regression and Random Forest
-Project Overview
+📊Crime Data Classification 
 
-This project focuses on building machine learning models to classify crime incidents based on a rich dataset with multiple crime-related features. The goal is to accurately predict crime categories or outcomes while effectively handling challenges posed by imbalanced classes.
+Overview
 
-Extensive preprocessing was applied, including handling missing values, removing outliers, encoding categorical variables, and engineering features such as extracting the year from date columns.
+This project builds machine learning models to classify crime incidents using a structured crime dataset. It addresses imbalanced classes and applies Logistic Regression and Random Forest to predict crime categories with high accuracy.
 
-Key Features
+Dataset
 
-Comprehensive Exploratory Data Analysis (EDA) to identify trends, distributions, and relationships.
+Attributes include:
 
-Preprocessing of numerical and categorical features, outlier removal, and feature engineering.
-
-Implementation of two classification models:
-
-Logistic Regression with class weight adjustment for imbalanced classes.
-
-Random Forest Classifier for improved predictive performance through ensemble learning.
-
-Hyperparameter Tuning using GridSearchCV for optimal model parameters.
-
-Threshold Adjustment to balance precision and recall, particularly for minority classes.
-
-Model evaluation using accuracy, confusion matrix, and classification reports.
-
-Dataset Description
-
-The dataset contains crime records with attributes including:
-
-Crime type (Primary Type)
+Primary crime type
 
 Location details
 
-Arrest status
+Arrest and domestic indicators
 
-Domestic crime indicator
+FBI/IUCR codes
 
-FBI and IUCR codes
+Date and time information
 
-Date and time fields
+Preprocessing steps:
 
-Preprocessing Steps:
+Dropped irrelevant columns (e.g., IDs)
 
-Dropping irrelevant columns (IDs, etc.)
+Handled missing values and outliers (IQR method)
 
-Outlier detection and removal using IQR method
+Encoded categorical variables
 
-Encoding categorical variables and extracting date-time features
+Extracted temporal features (year, month)
 
-Handling class imbalance via model parameters and threshold tuning
+Addressed class imbalance with class weights and threshold tuning
 
-Environment and Dependencies
+Objectives
 
-Python 3.x
+Perform EDA to explore crime patterns and distributions
 
-pandas
+Preprocess and engineer features for modeling
 
-numpy
+Train and tune:
 
-matplotlib
+Logistic Regression (class-weight adjustments)
 
-seaborn
+Random Forest Classifier (ensemble learning)
 
-scikit-learn
+Evaluate models using accuracy, confusion matrix, and classification reports
 
-How to Use
+Optimize hyperparameters using GridSearchCV
 
-Load the dataset and perform data cleaning and preprocessing.
+Tech Stack
 
-Conduct exploratory data analysis to visualize crime patterns.
+Language: Python 3.x
 
-Split the data into training and testing sets.
+Libraries: pandas, numpy, matplotlib, seaborn, scikit-learn
 
-Train Logistic Regression and Random Forest models with hyperparameter tuning using GridSearchCV.
+Usage
 
-Adjust classification thresholds to improve predictions on imbalanced data.
+Clone the repository:
 
-Evaluate models and select the best performing one.
+git clone https://github.com/HARSHIT071004/Crime_data_model.git
+cd Crime_data_model
+
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+
+Run preprocessing and model training:
+
+python crime_classification.py
 
 Results
 
-Both Logistic Regression and Random Forest demonstrated strong classification performance.
+Random Forest delivered higher accuracy than Logistic Regression.
 
-Threshold adjustment improved recall for minority classes without significantly reducing precision.
+Threshold tuning improved recall for minority classes without reducing precision.
 
-Random Forest outperformed Logistic Regression due to its ability to capture complex patterns.
+Future Enhancements
 
-Future Work
+Explore Gradient Boosting or XGBoost.
 
-Experiment with other ensemble methods such as Gradient Boosting or XGBoost.
+Use SMOTE or other sampling techniques for class imbalance.
 
-Apply advanced sampling techniques like SMOTE to handle class imbalance.
-
-Incorporate temporal analysis to capture trends over time.
-
-Deploy the model as a web application or API for real-time crime prediction.
+Deploy as a web application or API for real-time predictions.
 
 Author
 
-Harshit Sharma – Data Science / Machine Learning Enthusiast
+Harshit Sharma
+
+GitHub: HARSHIT071004Enthusiast
